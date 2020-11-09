@@ -20,4 +20,12 @@ async function sendMessage(chatId, message){
             }
         }
     }
-}
+
+
+    const responses = await sessionClient.detectIntent(request);
+    const result = responses[0].queryResult;
+    console.log(JSON.stringify(result, null, 2));
+
+};
+
+sendMessage('12938123', 'opinha');
